@@ -1,0 +1,156 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Roboto", "sans-serif";
+  src: url("/css/Roboto-Light.ttf"), url("/css/Roboto-Regular.ttf"), url("/css/Roboto-Black.ttf");
+}
+/*règles générales todo voir pour variable pour border et padding */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+h1 {
+  margin: 20px;
+}
+
+.logo {
+  text-align: center;
+  padding: 10px;
+}
+
+.intro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.entete {
+  background-color: #eaeaea;
+  border-top: 2px #dddddd solid;
+}
+.entete p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.corps {
+  background-color: #f6f6f6;
+  padding: 20px;
+}
+.corps a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: #9356DC;
+  border: 1px #9356DC solid;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.fonctionnement ul {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.fonctionnement ul li {
+  display: flex;
+  position: relative;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px;
+}
+.fonctionnement ul li .rond {
+  display: inline-block;
+  position: absolute;
+  left: -11px;
+  background-color: #9356DC;
+  color: white;
+  padding: 4px 5px 5px 5px;
+  border-radius: 20px;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  margin-top: -4px;
+}
+.fonctionnement ul li i {
+  color: grey;
+  margin: 0 20px 0 20px;
+}
+.fonctionnement ul li span {
+  font-weight: bold;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 70%;
+}
+
+.restaurant {
+  background-color: #f6f6f6;
+  padding: 10px;
+  margin: 10px 0 10px 0;
+}
+
+.presentation {
+  width: 90%;
+  margin: 10px auto 10px auto;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: white;
+}
+.presentation img {
+  width: 100%;
+}
+.presentation .new {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+}
+.presentation .new .new--green {
+  background-color: #99e2d0;
+  color: #008766;
+  padding: 8px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+.presentation .presentaion__legende {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 15px 0 15px;
+}
+.presentation .presentaion__legende h2 {
+  margin-bottom: 5px;
+}
+.presentation .presentaion__legende p {
+  margin-top: 5px;
+}
+.presentation .presentation__coeur {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+
+.supp {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
