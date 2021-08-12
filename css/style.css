@@ -1,13 +1,13 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "Roboto", "Shrikhand", "sans-serif";
-  src: url("/css/Roboto-Light.ttf"), url("/css/Roboto-Regular.ttf"), url("/css/Roboto-Black.ttf"), url("/css/Shrikhand-Regular.ttf");
+  font-family: Roboto, Shrikhand, sans-serif;
+  src: url("Roboto-Light.ttf"), url("Roboto-Regular.ttf"), url("Roboto-Black.ttf"), url("Shrikhand-Regular.ttf");
 }
 /*règles générales todo voir pour variable pour border et padding */
 body {
   padding: 0;
   margin: 0;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, Shrikhand, sans-serif;
   width: 100%;
 }
 
@@ -27,6 +27,16 @@ h1 {
 
 .test {
   font-family: Shrikhand, sans-serif;
+}
+
+.elastic {
+  /*font-weight: bold;*/
+  /*display: inline-block;*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 80%;
+  /*margin: 0;*/
 }
 
 .btn {
@@ -110,10 +120,6 @@ h1 {
 .fonctionnement ul li span {
   font-weight: bold;
   display: inline-block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 70%;
 }
 
 .restaurant {
@@ -169,12 +175,16 @@ h1 {
   display: flex;
   align-items: center;
   font-size: 25px;
+  margin: 20px 20px 5px 20px;
 }
 
 footer {
   background-color: #353535;
   color: white;
   padding: 20px;
+}
+footer p {
+  font-family: Shrikhand, sans-serif;
 }
 footer li {
   margin: 10px 0 10px 0;
@@ -190,6 +200,9 @@ footer a {
 }
 .top img {
   width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
 }
 .top .name {
   display: flex;
@@ -204,30 +217,57 @@ footer a {
   margin-bottom: 5px;
 }
 
-.entree {
+.label {
   background-color: #f6f6f6;
+  padding: 20px 0 20px 0;
 }
-.entree .content {
+.label .label--title {
+  width: 95%;
+  margin: 16px auto;
+  border-bottom: 1px #99E2D0 solid;
+  padding-bottom: 10px;
+}
+.label .description {
   display: flex;
   justify-content: space-between;
+  width: 95%;
   border-radius: 20px;
   background-color: white;
-  width: 95%;
-  margin: auto;
+  margin: 15px auto;
   overflow: hidden;
+  box-shadow: 2px 2px 15px 0 #dddddd;
 }
-.entree .content .priece {
+.label .description .content {
   display: flex;
-  align-items: flex-end;
+  justify-content: space-between;
+  width: 80%;
 }
-.entree .content .check {
+.label .description .content .menu {
+  padding: 10px;
+  width: 100%;
+}
+.label .description .content .menu h3 {
+  margin: 10px 0;
+}
+.label .description .content .price {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 20%;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.label .description .content p {
+  margin: 10px 0;
+}
+.label .description .check {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 20%;
   background-color: #99E2D0;
 }
-.entree .content .check i {
+.label .description .check i {
   color: white;
   font-size: 20px;
 }
