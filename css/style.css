@@ -1,7 +1,11 @@
 @charset "UTF-8";
 @font-face {
-  font-family: Roboto, Shrikhand, sans-serif;
-  src: url("Roboto-Light.ttf"), url("Roboto-Regular.ttf"), url("Roboto-Black.ttf"), url("Shrikhand-Regular.ttf");
+  font-family: Roboto;
+  src: url("Roboto-Light.ttf"), url("Roboto-Regular.ttf"), url("Roboto-Black.ttf");
+}
+@font-face {
+  font-family: Shrikhand;
+  src: url("Shrikhand-Regular.ttf");
 }
 /*règles générales todo voir pour variable pour border et padding */
 body {
@@ -25,7 +29,7 @@ h1 {
   margin: 20px;
 }
 
-.test {
+.police {
   font-family: Shrikhand, sans-serif;
 }
 
@@ -35,7 +39,7 @@ h1 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 80%;
+  width: 95%;
   /*margin: 0;*/
 }
 
@@ -100,13 +104,16 @@ h1 {
   margin: 10px;
   box-shadow: 2px 2px 15px 0 #dddddd;
 }
+.fonctionnement ul li:hover {
+  background-color: #9356DC;
+}
 .fonctionnement ul li .rond {
   display: inline-block;
   position: absolute;
   left: -11px;
   background-color: #9356DC;
   color: white;
-  padding: 4px 5px 5px 5px;
+  padding: 4px 5px 6px 5px;
   border-radius: 20px;
   width: 15px;
   height: 15px;
@@ -139,33 +146,39 @@ h1 {
   width: 100%;
   height: 220px;
   object-fit: cover;
-  object-position: center;
+  object-position: 100% 90%;
 }
-.presentation .new {
+.presentation .img--big {
+  object-position: 100% 60%;
+}
+
+.new {
   position: absolute;
   right: 15px;
   top: 20px;
 }
-.presentation .new .new--green {
+.new .new--green {
   background-color: #99E2D0;
   color: #008766;
   padding: 8px;
   border-radius: 2px;
   font-weight: bold;
 }
-.presentation .presentaion__legende {
+
+.presentaion__legende {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 0 15px 0 15px;
 }
-.presentation .presentaion__legende h2 {
+.presentaion__legende h2 {
   margin-bottom: 5px;
 }
-.presentation .presentaion__legende p {
+.presentaion__legende p {
   margin-top: 5px;
 }
-.presentation .presentation__coeur {
+
+.presentation__coeur {
   display: flex;
   align-items: center;
   font-size: 25px;
@@ -174,8 +187,10 @@ h1 {
 .heart {
   display: flex;
   align-items: center;
-  font-size: 25px;
-  margin: 20px 20px 5px 20px;
+  justify-content: center;
+  width: 70px;
+  font-size: 30px;
+  margin: 20px 3% 5px 0;
 }
 
 footer {
@@ -200,11 +215,12 @@ footer a {
 }
 .top img {
   width: 100%;
-  height: 220px;
+  height: 320px;
   object-fit: cover;
   object-position: center;
 }
-.top .name {
+
+.name {
   display: flex;
   justify-content: space-around;
   background-color: #f6f6f6;
@@ -213,8 +229,10 @@ footer a {
   width: 100%;
   border-radius: 30px 30px 0 0;
 }
-.top .name h1 {
-  margin-bottom: 5px;
+.name h1 {
+  margin: 30px 0 5px 3%;
+  font-size: xx-large;
+  width: calc(100% - 70px);
 }
 
 .label {
@@ -224,52 +242,78 @@ footer a {
 .label .label--title {
   width: 95%;
   margin: 16px auto;
-  border-bottom: 1px #99E2D0 solid;
   padding-bottom: 10px;
 }
-.label .description {
+.label .label--title:after {
+  content: "";
+  display: block;
+  width: 45px;
+  border-bottom: 3px #99E2D0 solid;
+  margin-top: 7px;
+}
+
+.description {
   display: flex;
   justify-content: space-between;
   width: 95%;
+  position: relative;
   border-radius: 20px;
   background-color: white;
   margin: 15px auto;
   overflow: hidden;
   box-shadow: 2px 2px 15px 0 #dddddd;
 }
-.label .description .content {
+
+.content {
   display: flex;
   justify-content: space-between;
-  width: 80%;
-}
-.label .description .content .menu {
-  padding: 10px;
   width: 100%;
 }
-.label .description .content .menu h3 {
+
+.menu {
+  padding: 10px 0 10px 10px;
+  width: calc(100% - 50px);
+}
+.menu h3 {
   margin: 10px 0;
 }
-.label .description .content .price {
+.menu p {
+  margin: 10px 0;
+}
+
+.price {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-end;
-  width: 20%;
+  width: 50px;
   font-weight: bold;
   padding-bottom: 10px;
+  padding-right: 20px;
 }
-.label .description .content p {
+.price p {
   margin: 10px 0;
 }
-.label .description .check {
+
+.check {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20%;
+  width: 70px;
   background-color: #99E2D0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(70px);
 }
-.label .description .check i {
+.check i {
   color: white;
   font-size: 20px;
+}
+
+.order {
+  background-color: #f6f6f6;
+  text-align: center;
+  padding-bottom: 30px;
 }
 
 .supp {
