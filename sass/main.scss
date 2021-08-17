@@ -17,6 +17,8 @@ $footer: #353535;
   src: url("Shrikhand-Regular.ttf");
 }
 
+
+
 /*règles générales todo voir pour variable pour border et padding */
 body {
   padding: 0;
@@ -321,14 +323,45 @@ footer {
   background-color: white;
   margin: 15px auto;
   overflow: hidden;
-  box-shadow: 2px 2px 15px 0 #dddddd; //todo en double avec plein d'autres elts -> voir sass
+  box-shadow: 2px 2px 15px 0 darken($fond, 10%); // avant test de darken -> #dddddd; //todo en double avec plein d'autres elts -> voir sass (mixin)
+  //transform: translate(0);
+  //transition: transform 5s ease-in-out;
+  /*&:hover + .check {
+    .content {
+      width: calc(100% - 70px);
+      //transform: translate(calc(100% - 70px));
+      transition: transform 5s ease-in-out;
+    }
+    .content + .check {
+      transform: translate(0);
+    }
+    transform: translateX(0);
+    transition: transform 5s ease-in-out;
+  }*/
 }
 
 .content {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  //premier test sur content
+  transition: 500ms ease-in-out;
+  &:hover {
+    width: calc(100% - 70px);
+    /*transform: translateX(0);*/
+    //transition: 500ms ease-in-out;
+    & + .check {
+      transform: translateX(0);
+      transition: transform 500ms ease-in-out; //todo mixin ! -> demander à Jean ou placer la transition
+      i {
+        transform: rotate(0);
+        transition: transform 500ms ease-in-out;
+
+      }
+    }
+  }
 }
+
 
 .menu {
   padding: 10px 0 10px 10px;
@@ -363,10 +396,14 @@ footer {
   position: absolute;
   top: 0;
   right: 0;
+  bottom: 0;
   transform: translateX(70px);
+  transition: 500ms ease-in-out; //todo a voir animation au chargement de la page
   i {
     color: white;
     font-size: 20px;
+    transform: rotate(0.8turn);
+    transition: 500ms ease-in-out;
   }
 }
 
