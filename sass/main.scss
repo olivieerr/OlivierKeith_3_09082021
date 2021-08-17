@@ -17,7 +17,27 @@ $footer: #353535;
   src: url("Shrikhand-Regular.ttf");
 }
 
+@keyframes chgtMenu {
+  0% {
+    opacity: 0;
+    transform: translateY(+15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+@keyframes load {
+0% {
+  opacity: 1;
+  transform: rotate(90deg);
+}
+100% {
+  opacity: 0;
+  transform: rotate(0);
+}
+}
 
 /*règles générales todo voir pour variable pour border et padding */
 body {
@@ -206,37 +226,17 @@ h1 {
   }
 }
 
-/*.presentation__coeur {
-  display: flex;
-  align-items: center;
-  font-size: 25px;
-}*/
-
 //Carateristique du coeur sur la page d'accueil
 .heart {
   display: flex;
+  justify-content: center;
   align-items: center;
   font-size: 25px;
   color: #353535;
   &:hover {
     color: red;
   }
-  .heart--label {
-    width: 70px;
-    font-size: 30px;
-    margin: 20px 3% 5px 0;
-  }
 }
-
-/*essai d'unification
-.heart {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 70px;
-    font-size: 25px;
-    margin: 20px 3% 5px 0;
-}*/
 
 //caracteristique du coeur sur les pages de menu
 .heart--label {
@@ -245,7 +245,6 @@ h1 {
   margin: 20px 3% 5px 0;
 }
 
-//todo corriger le footer
 footer {
   background-color: $footer;
   color: white;
@@ -324,20 +323,7 @@ footer {
   margin: 15px auto;
   overflow: hidden;
   box-shadow: 2px 2px 15px 0 darken($fond, 10%); // avant test de darken -> #dddddd; //todo en double avec plein d'autres elts -> voir sass (mixin)
-  //transform: translate(0);
-  //transition: transform 5s ease-in-out;
-  /*&:hover + .check {
-    .content {
-      width: calc(100% - 70px);
-      //transform: translate(calc(100% - 70px));
-      transition: transform 5s ease-in-out;
-    }
-    .content + .check {
-      transform: translate(0);
-    }
-    transform: translateX(0);
-    transition: transform 5s ease-in-out;
-  }*/
+  animation: chgtMenu 2s;
 }
 
 .content {
