@@ -19,8 +19,8 @@ $footer: #353535;
 
 @keyframes chgtMenu {
   0% {
-    opacity: 0;
-    transform: translateY(+15px);
+    transform: translateY(15px);
+
   }
   100% {
     opacity: 1;
@@ -29,14 +29,23 @@ $footer: #353535;
 }
 
 @keyframes load {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
+
+@keyframes rotation {
 0% {
-  opacity: 1;
-  transform: rotate(90deg);
-}
-100% {
-  opacity: 0;
   transform: rotate(0);
-}
+  }
+100% {
+  transform: rotate(360deg);
+  }
 }
 
 /*règles générales todo voir pour variable pour border et padding */
@@ -45,6 +54,62 @@ body {
   margin: 0;
   font-family: Roboto, Shrikhand, sans-serif;
   width: 100%;
+}
+
+.load {
+  display: flex;
+  align-items: center;
+  font-family: Shrikhand, sans-serif;
+  justify-content: center;
+  //font-size: 40px;
+  background-color: $fond;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  animation: load 5s forwards;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.loader__circle {
+  border-radius: 50px;
+  border: 3px solid transparent;
+  border-top-color: $secondaire;
+  animation: rotation 1s linear infinite;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    right: 2px;
+    border: 3px solid transparent;
+    border-top-color: $tertiaire;
+    border-radius: 50px;
+    opacity: 0.5;
+    animation: rotation 5s linear infinite;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    bottom: 7px;
+    right: 7px;
+    border: 3px solid transparent;
+    border-top-color: $primaire;
+    border-radius: 50px;
+    opacity: 0.8;
+    animation: rotation 10s linear infinite;
+  }
 }
 
 a {
@@ -234,9 +299,10 @@ h1 {
   font-size: 25px;
   color: #353535;
   &:hover {
-    color: red;
+      color: red;
   }
 }
+
 
 //caracteristique du coeur sur les pages de menu
 .heart--label {

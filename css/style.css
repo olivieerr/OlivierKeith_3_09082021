@@ -9,7 +9,6 @@
 }
 @keyframes chgtMenu {
   0% {
-    opacity: 0;
     transform: translateY(15px);
   }
   100% {
@@ -20,11 +19,19 @@
 @keyframes load {
   0% {
     opacity: 1;
-    transform: rotate(90deg);
   }
   100% {
     opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
+@keyframes rotation {
+  0% {
     transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 /*règles générales todo voir pour variable pour border et padding */
@@ -33,6 +40,62 @@ body {
   margin: 0;
   font-family: Roboto, Shrikhand, sans-serif;
   width: 100%;
+}
+
+.load {
+  display: flex;
+  align-items: center;
+  font-family: Shrikhand, sans-serif;
+  justify-content: center;
+  background-color: #f6f6f6;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  animation: load 5s forwards;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+.loader__circle {
+  border-radius: 50px;
+  border: 3px solid transparent;
+  border-top-color: #FF79DA;
+  animation: rotation 1s linear infinite;
+}
+.loader__circle::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  border: 3px solid transparent;
+  border-top-color: #99E2D0;
+  border-radius: 50px;
+  opacity: 0.5;
+  animation: rotation 5s linear infinite;
+}
+.loader__circle::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  bottom: 7px;
+  right: 7px;
+  border: 3px solid transparent;
+  border-top-color: #9356DC;
+  border-radius: 50px;
+  opacity: 0.8;
+  animation: rotation 10s linear infinite;
 }
 
 a {
