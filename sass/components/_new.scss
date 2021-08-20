@@ -1,0 +1,13 @@
+//Tout ce qui concerne le "new"
+.new {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  .new--green {
+    background-color: $tertiaire;
+    color: #008766;
+    padding: 8px;
+    border-radius: 2px;
+    font-weight: bold;
+  }
+}

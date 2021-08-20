@@ -1,0 +1,6 @@
+//mixins
+
+//definition du box-shadow de base
+@mixin box-shadow {
+  box-shadow: 2px 2px 15px darken($fond, 10%);
+}

@@ -1,0 +1,13 @@
+//tout ce qui concerne le header
+.logo {
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  i {
+    position: absolute;
+    left: 0;
+    top: 15px;
+    font-size: 20px;
+    margin-left: 20px;
+  }
+}

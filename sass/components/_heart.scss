@@ -1,0 +1,33 @@
+//Carateristique du coeur sur la page d'accueil
+.heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  width: 61px;
+  position: relative;
+  &--full{
+    position: absolute;
+    left: 18px;
+    opacity: 0;
+    color: $primaire;
+  }
+  &:hover {
+    .heart--empty{
+      opacity: 0;
+    }
+    .heart--full{
+      opacity: 1;
+      //color: $primaire;
+      transition: 1s linear;
+    }
+  }
+}
+
+
+//caracteristique du coeur sur les pages de menu
+.heart--label {
+  width: 70px;
+  font-size: 30px;
+  margin: 20px 3% 5px 0;
+}

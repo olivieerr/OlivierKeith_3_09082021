@@ -1,0 +1,23 @@
+//Tout ce qui concerne le footer
+footer {
+  background-color: $footer;
+  color: white;
+  padding: 20px;
+  p {
+    font-family: Shrikhand, sans-serif;
+  }
+  li {
+    margin: 10px 0 10px 0;
+  }
+  a {
+    color: white;
+  }
+  i {
+    margin-right: 10px;
+  }
+}
+
+.small {
+  font-size: x-small;
+  transform: rotate(-10deg);
+}
