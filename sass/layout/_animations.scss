@@ -1,8 +1,12 @@
 //Animations keyframes
 @keyframes chgtMenu {
   0% {
-    transform: translateY(15px);
-
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(50px);
   }
   100% {
     opacity: 1;

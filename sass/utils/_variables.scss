@@ -1,8 +1,20 @@
 //liste des variables
+
+//couleurs du site
 $primaire: #9356DC;
 $secondaire: #FF79DA;
 $tertiaire: #99E2D0;
 $fond: #f6f6f6;
 $footer: #353535;
+
+//taille min et max ded la div main
 $max-width: 1920px;
 $min-width: 280px;
+
+//le delain pour l'animation au chargement des menus
+$delay: 200ms;
+
+//taille d'écran pour les media queries
+$big_Size: 1200px;
+$med_Size: 991px;
+$lit_Size:774px;

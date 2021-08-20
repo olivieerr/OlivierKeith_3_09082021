@@ -26,7 +26,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  @media (min-width: 1200px) {
+  @media (min-width: $big_Size) {
     flex-direction: row;
     justify-content: space-around;
   }
@@ -38,7 +38,7 @@
     padding: 20px;
     margin: 10px;
     @include box-shadow;
-    @media (min-width: 1200px) {
+    @media (min-width: $big_Size) {
       width: 25%;
     }
     &:hover {
@@ -74,7 +74,7 @@
 .restaurant {
   background-color: $fond;
   padding: 20px 0 20px 0;
-  @media (min-width: 991px) {
+  @media (min-width: $med_Size) {
     h1 {
       width: 100%;
     }
@@ -90,7 +90,7 @@
   border-radius: 20px;
   overflow: hidden;
   background-color: white;
-  @media (min-width: 991px) {
+  @media (min-width: $med_Size) {
     width: 45%;
   }
   img {

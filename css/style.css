@@ -106,7 +106,12 @@ h1 {
 
 @keyframes chgtMenu {
   0% {
-    transform: translateY(15px);
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(50px);
   }
   100% {
     opacity: 1;
@@ -380,14 +385,28 @@ footer i {
   width: calc(100% - 70px);
 }
 
+@media (min-width: 1200px) {
+  .big--screen {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #f6f6f6;
+  }
+}
+
 .label {
   background-color: #f6f6f6;
   padding: 20px 0 20px 0;
 }
-@media (min-width: 990px) {
+@media (min-width: 991px) {
   .label {
     display: flex;
     flex-wrap: wrap;
+  }
+}
+@media (min-width: 1200px) {
+  .label {
+    width: 25%;
   }
 }
 .label .label--title {
@@ -413,12 +432,61 @@ footer i {
   margin: 15px auto;
   overflow: hidden;
   box-shadow: 2px 2px 15px #dddddd;
-  animation: chgtMenu 2s;
+  animation: chgtMenu 2s backwards;
 }
-@media (min-width: 990px) {
+@media (min-width: 991px) {
   .description {
     width: 45%;
   }
+}
+@media (min-width: 1200px) {
+  .description {
+    width: 95%;
+  }
+}
+
+/*boucle pour générer les delay de l'animation
+  * i = nb d'iteration
+  * $delay = 200ms
+ */
+.delay-0 {
+  animation-delay: 0ms;
+}
+
+.delay-1 {
+  animation-delay: 200ms;
+}
+
+.delay-2 {
+  animation-delay: 400ms;
+}
+
+.delay-3 {
+  animation-delay: 600ms;
+}
+
+.delay-4 {
+  animation-delay: 800ms;
+}
+
+.delay-5 {
+  animation-delay: 1000ms;
+}
+
+.delay-6 {
+  animation-delay: 1200ms;
+}
+
+.delay-7 {
+  animation-delay: 1400ms;
+}
+
+.delay-8 {
+  animation-delay: 1600ms;
+}
+
+.delay-9 {
+  animation-delay: 1800ms;
 }
 
 .content {

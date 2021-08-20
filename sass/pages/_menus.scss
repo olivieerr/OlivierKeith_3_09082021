@@ -8,7 +8,7 @@
     height: 320px;
     object-fit: cover;
     object-position: center;
-    @media (min-width: 774px){
+    @media (min-width: $lit_Size){
       object-position: 100% 65%;
     }
   }
@@ -29,12 +29,24 @@
   }
 }
 
+.big--screen {
+  @media (min-width: $big_Size) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: $fond;
+  }
+}
+
 .label {
   background-color: $fond;
   padding: 20px 0 20px 0;
-  @media (min-width: 990px) {
+  @media (min-width: $med_Size) {
     display: flex;
     flex-wrap: wrap;
+  }
+  @media (min-width: $big_Size) {
+    width: 25%;
   }
   .label--title {
     width: 95%;
@@ -60,9 +72,23 @@
   margin: 15px auto;
   overflow: hidden;
   @include box-shadow;
-  animation: chgtMenu 2s;
-  @media (min-width: 990px) {
+  animation: chgtMenu 2s backwards;
+  @media (min-width: $med_Size) {
     width: 45%;
+  }
+  @media (min-width: $big_Size) {
+    width: 95%;
+
+  }
+}
+
+/*boucle pour générer les delay de l'animation
+  * i = nb d'iteration
+  * $delay = 200ms
+ */
+@for $i from 0 through 9 {
+  .delay-#{$i} {
+    animation-delay: $delay*$i;
   }
 }
 
