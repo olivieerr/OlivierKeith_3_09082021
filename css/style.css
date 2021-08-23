@@ -23,10 +23,6 @@ ul {
   list-style-type: none;
 }
 
-h1 {
-  margin: 20px;
-}
-
 .police {
   font-family: Shrikhand, sans-serif;
 }
@@ -89,6 +85,7 @@ h1 {
   width: 70px;
   font-size: 30px;
   margin: 20px 3% 5px 0;
+  cursor: pointer;
 }
 
 .new {
@@ -226,6 +223,10 @@ footer i {
   transform: rotate(-10deg);
 }
 
+.principale {
+  margin: 20px;
+}
+
 .intro {
   width: 100%;
   display: flex;
@@ -312,7 +313,7 @@ footer i {
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  .restaurant h1 {
+  .restaurant h2 {
     width: 100%;
   }
 }
@@ -390,6 +391,7 @@ footer i {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: flex-start;
     background-color: #f6f6f6;
   }
 }
@@ -433,6 +435,18 @@ footer i {
   overflow: hidden;
   box-shadow: 2px 2px 15px #dddddd;
   animation: chgtMenu 2s backwards;
+  transition: 500ms ease-in-out;
+}
+.description:hover .content {
+  width: calc(100% - 70px);
+}
+.description:hover .content + .check {
+  transform: translateX(0);
+  transition: transform 500ms ease-in-out;
+}
+.description:hover .content + .check i {
+  transform: rotate(0);
+  transition: transform 500ms ease-in-out;
 }
 @media (min-width: 991px) {
   .description {
@@ -493,18 +507,18 @@ footer i {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  transition: 500ms ease-in-out;
-}
-.content:hover {
-  width: calc(100% - 70px);
-}
-.content:hover + .check {
-  transform: translateX(0);
-  transition: transform 500ms ease-in-out;
-}
-.content:hover + .check i {
-  transform: rotate(0);
-  transition: transform 500ms ease-in-out;
+  /*&:hover {
+    width: calc(100% - 70px);
+    & + .check {
+      transform: translateX(0);
+      transition: transform 500ms ease-in-out;
+      i {
+        transform: rotate(0);
+        transition: transform 500ms ease-in-out;
+
+      }
+    }
+  }*/
 }
 
 .menu {

@@ -1,4 +1,9 @@
 //tout ce qui touche à la page d'accueil
+
+.principale {
+  margin: 20px;
+}
+
 .intro {
   width: 100%;
   display: flex;
@@ -75,7 +80,7 @@
   background-color: $fond;
   padding: 20px 0 20px 0;
   @media (min-width: $med_Size) {
-    h1 {
+    h2 {
       width: 100%;
     }
     display: flex;
