@@ -435,10 +435,12 @@ footer i {
   overflow: hidden;
   box-shadow: 2px 2px 15px #dddddd;
   animation: chgtMenu 2s backwards;
-  transition: 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  cursor: pointer;
 }
 .description:hover .content {
   width: calc(100% - 70px);
+  transition: 500ms ease-in-out;
 }
 .description:hover .content + .check {
   transform: translateX(0);
