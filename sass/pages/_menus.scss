@@ -74,7 +74,6 @@
   overflow: hidden;
   @include box-shadow;
   animation: chgtMenu 2s backwards;
-  transition: transform 500ms ease-in-out;
   cursor: pointer;
   &:hover .content{
     width: calc(100% - 70px);
@@ -112,21 +111,8 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  //transition: 500ms ease-in-out;
-  /*&:hover {
-    width: calc(100% - 70px);
-    & + .check {
-      transform: translateX(0);
-      transition: transform 500ms ease-in-out;
-      i {
-        transform: rotate(0);
-        transition: transform 500ms ease-in-out;
-
-      }
-    }
-  }*/
+  transition: 500ms ease-in-out;
 }
-
 
 .menu {
   padding: 10px 0 10px 10px;
